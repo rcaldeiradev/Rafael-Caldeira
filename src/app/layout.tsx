@@ -6,10 +6,10 @@ import Content from "@/components/layout/Content";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt">
+    <html lang="pt" className="h-full">
       <GoogleAnalytics gaMeasurementId={process.env.GA_MEASUREMENT_ID ?? ''}/>
 
-      <body className='flex flex-col items-center justify-center h-screen w-screen'>
+      <body className="flex flex-col h-full">
         <Header />
 
         <Content>
