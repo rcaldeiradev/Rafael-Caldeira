@@ -15,4 +15,4 @@ export default function ProjetosPage() {
       </div>
     </div>
   );
-};
+}
