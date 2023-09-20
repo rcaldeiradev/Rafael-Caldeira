@@ -1,4 +1,3 @@
-import SectionTitle from "@/components/layout/SectionTitle";
 import Hero from "@/app/components/Hero";
 import About from "@/app/components/About";
 

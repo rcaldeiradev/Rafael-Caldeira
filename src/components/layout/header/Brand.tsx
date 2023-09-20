@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import mePic from '../../../../public/me.jpg';
 
 export default function Brand() {
   return (
