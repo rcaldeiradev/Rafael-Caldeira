@@ -1,7 +1,7 @@
-import './globals.css';
+import './globals.scss';
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/footer/Footer";
+import Header from "@/components/layout/header/Header";
 import Content from "@/components/layout/Content";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

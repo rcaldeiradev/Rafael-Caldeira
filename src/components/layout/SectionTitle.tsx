@@ -1,7 +1,12 @@
-export default function SectionTitle({ titleText }: { titleText: string }) {
+interface SectionTitleProps {
+  titleText: string,
+  className?: string,
+}
+
+export default function SectionTitle({ titleText, className }: SectionTitleProps) {
   return (
-    <h1 className="font-bold text-xl mb-4">
+    <h2 className={`font-bold text-4xl mb-12 bg-emerald-300 inline-block px-3 py-1 ${className}`}>
       {titleText}
-    </h1>
+    </h2>
   )
 }

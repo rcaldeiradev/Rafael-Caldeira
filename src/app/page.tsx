@@ -1,4 +1,6 @@
 import SectionTitle from "@/components/layout/SectionTitle";
+import Hero from "@/app/components/Hero";
+import About from "@/app/components/About";
 
 export const metadata = {
   title: 'Home | Rafael Caldeira',
@@ -7,12 +9,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className={'text-center'}>
-      <SectionTitle titleText="Home" />
-
-      <div>
-        Como diria Mussum: <span className={'bg-amber-200 p-1'}>Voltis em brevis.</span>
-      </div>
+    <div className="container mx-auto">
+      <Hero />
+      <About />
     </div>
   );
 }
