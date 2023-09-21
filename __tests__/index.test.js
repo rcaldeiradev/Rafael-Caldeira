@@ -7,7 +7,7 @@ describe('Pipeline test', () => {
   })
 
   it('Runs tests #2', () => {
-    expect(false).toBeFalsy();
+    expect(true).toBeFalsy();
   })
 
   it('Runs tests #3', () => {
