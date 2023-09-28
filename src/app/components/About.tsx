@@ -31,7 +31,7 @@ export default function About() {
 
         <div className="paragraphs text-xl font-light">
           <p>
-            Hi there! I'm a Software Engineer with 7+ years experience, crafting top-notch web solutions for notable organizations
+            Hi there! I am a Software Engineer with 7+ years experience, crafting top-notch web solutions for notable organizations
             like MIT and Doctors Without Borders. I excel in PHP, JavaScript, TypeScript, API integration, containers,
             automated tests, databases, server admin, SEO, CI...
           </p>
