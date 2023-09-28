@@ -19,6 +19,8 @@ const NavigationObject: NavigationItems = [
 export default function Navigation() {
   const pathname = usePathname();
 
+  return null;
+
   return (
     <ul className="navigation flex flex-wrap">
       {NavigationObject.map((item, key) => {

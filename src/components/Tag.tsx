@@ -1,0 +1,14 @@
+interface TagProps {
+  label: string,
+  className?: string,
+}
+
+export default function Tag(
+  { label, className }: TagProps
+) {
+  return (
+    <div className={`py-1 px-2 text-sm inline-block mr-3 rounded-lg ${className}`}>
+      {label}
+    </div>
+  )
+}
