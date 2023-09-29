@@ -1,16 +1,16 @@
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom'
+import Hero from "../src/app/components/Hero";
 
-describe('Pipeline test', () => {
-  it('Runs tests', () => {
-    expect(true).toBeTruthy();
-  })
+describe('Homepage', () => {
+  it('shows my name and role', () => {
+    render(<Hero />);
 
-  it('Runs tests #2', () => {
-    expect(false).toBeFalsy();
-  })
+    const heading = screen.getByRole('heading', {
+      name: /Rafael Caldeira Software Engineer/i,
+    });
 
-  it('Runs tests #3', () => {
-    expect(1).toBe(1);
+    expect(heading).toBeInTheDocument();
   })
-})
+});
+

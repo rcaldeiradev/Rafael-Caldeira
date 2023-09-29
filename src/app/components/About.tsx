@@ -5,31 +5,31 @@ import ArrowLink from "@/components/ArrowLink";
 
 export default function About() {
   return (
-    <div className="about flex flex-col md:flex-row mb-24">
-      <div
-        className="image-wrapper relative rounded-full overflow-hidden shrink-0"
-        style={{
-          height: '330px',
-          width: '330px',
-        }}>
-        <Image
-          src={mePic}
-          alt="Me"
-          fill={true}
-          className="-z-10"
-          priority={true}
-          unoptimized={true}
-          placeholder="blur"
-          style={{
-            objectFit: 'cover',
-          }}
-        />
+    <div className="about flex flex-col sm:flex-row mb-10 lg:mb-20">
+      <div className="max-w-[330px] max-h-[330px] w-full mb-8 shrink-0">
+        <div
+          className={`relative rounded-full overflow-hidden w-full pt-[100%]`}
+        >
+          <Image
+            src={mePic}
+            alt="Me"
+            fill={true}
+            className="sm:-z-10"
+            priority={true}
+            unoptimized={true}
+            placeholder="blur"
+            style={{
+              objectFit: 'cover',
+            }}
+          />
+        </div>
       </div>
 
-      <div className="texts-wrapper ml-12">
-        <SectionTitle titleText="About Me" className="mt-12 -ml-28" />
 
-        <div className="paragraphs text-xl font-light">
+      <div className="texts-wrapper sm:ml-12">
+        <SectionTitle titleText="About Me" className="mb-8 sm:mt-12 sm:-ml-28" />
+
+        <div className="paragraphs lg:text-xl font-light">
           <p>
             Hi there! I am a Software Engineer with 7+ years experience, crafting top-notch web solutions for notable organizations
             like MIT and Doctors Without Borders. I excel in PHP, JavaScript, TypeScript, API integration, containers,

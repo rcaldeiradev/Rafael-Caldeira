@@ -12,7 +12,7 @@ export default function ArrowLink(
 ) {
   return <Link
     href={path}
-    className={`text-xl text-blue-700 inline-block ${className}`}
+    className={`lg:text-xl text-blue-700 inline-block ${className}`}
   >
     {text}
     <ArrowLongRightIcon className="h-6 w-6 ml-3 inline-block" />
