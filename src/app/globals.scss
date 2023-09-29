@@ -3,18 +3,4 @@
 @tailwind utilities;
 @tailwind screens;
 
-.full-html {
-    h2, p {
-        margin-bottom: 2rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-        font-weight: 500;
-    }
-
-    p {
-        font-weight: 300;
-        font-size: 1.2rem;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
