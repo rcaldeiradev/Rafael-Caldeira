@@ -15,14 +15,14 @@ const NavigationObject: Array<NavigationItem> = [
     label: 'Home',
     href: '/'
   },
-  // {
-  //   label: 'About',
-  //   href: '/about'
-  // },
-  // {
-  //   label: 'Projects',
-  //   href: '/projects'
-  // },
+  {
+    label: 'About',
+    href: '/about'
+  },
+  {
+    label: 'Projects',
+    href: '/projects'
+  },
 ];
 
 export default function Navigation() {

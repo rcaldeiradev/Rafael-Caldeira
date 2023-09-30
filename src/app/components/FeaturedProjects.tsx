@@ -62,7 +62,7 @@ export default function FeaturedProjects() {
       </ul>
 
       <div className="actions flex justify-center">
-        <ArrowLink path={'/'} text={'See all projects'} />
+        <ArrowLink path={'/projects'} text={'See all projects'} />
       </div>
     </div>
   )
