@@ -13,7 +13,7 @@ interface CardsList extends Array<CardItem> {}
 const cards: CardsList = [
   {
     title: 'Benzel-Busch',
-    href: '/projects/benzel-busch',
+    href: '/projects',
     tags: [
       'Drupal',
       'React',
@@ -22,14 +22,14 @@ const cards: CardsList = [
   },
   {
     title: 'MIT Quest',
-    href: '/projects/mit-quest-for-intelligence',
+    href: '/projects',
     tags: [
       'Drupal 10',
     ],
   },
   {
     title: 'DomusVi',
-    href: '/projects/domusvi',
+    href: '/projects',
     tags: [
       'Drupal 7',
       'Apache Solr'

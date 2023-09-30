@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/layout/SectionTitle";
+import PageTitle from "@/components/layout/PageTitle";
 
 export const metadata = {
   title: 'Projetos | Rafael Caldeira',
@@ -7,12 +7,10 @@ export const metadata = {
 
 export default function ProjetosPage() {
   return (
-    <div className={'text-center'}>
-      <SectionTitle titleText="Projetos" />
+    <div className="container mx-auto">
+      <PageTitle titleText="Projects" />
 
-      <div>
-        Em brevis.
-      </div>
+      <div>Soon!</div>
     </div>
   );
 }
