@@ -5,13 +5,14 @@ import Card from "../../src/components/Card";
 describe('Card', () => {
   const title = 'Regular card'
   const href = '/card-href'
+  const linkText = 'Cool link text';
   const tags = [
     'First tag',
     'Second tag',
   ];
 
   beforeEach(() => {
-    render(<Card title={title} href={href} tags={tags} />);
+    render(<Card title={title} href={href} linkText={linkText} tags={tags} />);
   })
 
   it('renders the card title', () => {
@@ -23,6 +24,7 @@ describe('Card', () => {
   it('renders the card link', () => {
     const renderedLink = screen.getByRole('link');
     expect(renderedLink).toBeInTheDocument();
+    expect(renderedLink).toHaveTextContent(linkText);
     expect(renderedLink).toHaveAttribute('href', href);
   })
 

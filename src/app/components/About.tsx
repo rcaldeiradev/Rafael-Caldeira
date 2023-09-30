@@ -16,7 +16,6 @@ export default function About() {
             fill={true}
             className="sm:-z-10"
             priority={true}
-            unoptimized={true}
             placeholder="blur"
             style={{
               objectFit: 'cover',
@@ -37,7 +36,7 @@ export default function About() {
           </p>
         </div>
 
-        <ArrowLink path={'/about'} text={'Read more'} className="mt-6" />
+        <ArrowLink path={'/about'} text={'More about me'} className="mt-6" />
       </div>
     </div>
   )

@@ -13,7 +13,7 @@ interface CardsList extends Array<CardItem> {}
 const cards: CardsList = [
   {
     title: 'Benzel-Busch',
-    href: '/',
+    href: '/projects/benzel-busch',
     tags: [
       'Drupal',
       'React',
@@ -22,14 +22,14 @@ const cards: CardsList = [
   },
   {
     title: 'MIT Quest',
-    href: '/',
+    href: '/projects/mit-quest-for-intelligence',
     tags: [
       'Drupal 10',
     ],
   },
   {
     title: 'DomusVi',
-    href: '/',
+    href: '/projects/domusvi',
     tags: [
       'Drupal 7',
       'Apache Solr'
@@ -53,6 +53,7 @@ export default function FeaturedProjects() {
               <Card
                 title={card.title}
                 href={card.href}
+                linkText="View project"
                 tags={card.tags}
                 className="bg-gray-300 h-44 lg:h-64"
               />

@@ -4,12 +4,13 @@ import Tag from "@/components/Tag";
 interface CardProps {
   title: string,
   href: string,
+  linkText?: string,
   tags: Array<string>,
   className?: string,
 }
 
 export default function Card(
-  { title, href, tags, className }: CardProps
+  { title, href, linkText, tags, className }: CardProps
 ) {
   return (
     <div className={`card relative p-4 lg:p-6 rounded-3xl flex flex-col ${className}`}>
@@ -21,7 +22,7 @@ export default function Card(
 
       <div className="texts mt-auto">
         <h2 className="title text-2xl lg:text-4xl font-bold lg:mb-4">{title}</h2>
-        <ArrowLink path={href} text={'View'} />
+        <ArrowLink path={href} text={linkText ? linkText : 'View'} />
       </div>
     </div>
   )

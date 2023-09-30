@@ -9,7 +9,7 @@ describe('About me block', () => {
   })
 
   test('read more redirects to the about page', () => {
-    const anchor = screen.getByText('Read more');
+    const anchor = screen.getByText('More about me');
     expect(anchor).toHaveAttribute('href', '/about');
   })
 });
