@@ -17,6 +17,7 @@ export default function About() {
             className="sm:-z-10"
             priority={true}
             placeholder="blur"
+            sizes="330px"
             style={{
               objectFit: 'cover',
             }}
