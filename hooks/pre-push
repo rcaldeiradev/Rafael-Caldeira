@@ -1,0 +1,28 @@
+#!/bin/bash
+
+clear
+
+echo "Running required steps before pushing..."
+echo "[STEP 1]: LINT"
+
+npm run lint
+
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Push aborted."
+  exit 1
+fi
+
+echo "Linting OK"
+echo "[STEP 2]: TESTS"
+
+npm run test
+
+if [ $? -ne 0 ]; then
+  echo "Tests failed. Push aborted."
+  exit 1
+fi
+
+echo "Tests OK"
+
+echo "Proceeding with the push..."
+exit 0

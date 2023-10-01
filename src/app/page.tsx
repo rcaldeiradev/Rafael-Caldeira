@@ -4,8 +4,7 @@ import FeaturedProjects from '@/app/components/FeaturedProjects';
 
 export const metadata = {
   title: 'Home | Rafael Caldeira',
-  description:
-    'Desenvolvedor web há 8 anos, compartilho coisas legais sobre tecnologia.',
+  description: '',
 };
 
 export default function Home() {
