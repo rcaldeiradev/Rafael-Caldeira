@@ -1,4 +1,4 @@
-import { SocialIcon } from "react-social-icons";
+import { SocialIcon } from 'react-social-icons';
 
 export default function SocialLinks() {
   return (
@@ -22,5 +22,5 @@ export default function SocialLinks() {
         />
       </li>
     </ul>
-  )
+  );
 }

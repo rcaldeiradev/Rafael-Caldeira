@@ -1,5 +1,5 @@
-import Navigation from "@/components/layout/header/Navigation";
-import Brand from "@/components/layout/header/Brand";
+import Navigation from '@/components/layout/header/Navigation';
+import Brand from '@/components/layout/header/Brand';
 
 export default function Header() {
   return (
@@ -9,5 +9,5 @@ export default function Header() {
         <Brand />
       </div>
     </header>
-  )
+  );
 }

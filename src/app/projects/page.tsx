@@ -1,9 +1,10 @@
-import PageTitle from "@/components/layout/PageTitle";
+import PageTitle from '@/components/layout/PageTitle';
 
 export const metadata = {
   title: 'Projetos | Rafael Caldeira',
-  description: 'Conheça os projetos que já realizei, desde as stacks de desenvolvimento utilizadas até os desafios superados.',
-}
+  description:
+    'Conheça os projetos que já realizei, desde as stacks de desenvolvimento utilizadas até os desafios superados.',
+};
 
 export default function ProjetosPage() {
   return (

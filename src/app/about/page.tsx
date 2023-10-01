@@ -1,9 +1,9 @@
-import PageTitle from "@/components/layout/PageTitle";
+import PageTitle from '@/components/layout/PageTitle';
 
 export const metadata = {
   title: 'About | Rafael Caldeira',
   description: 'Soon',
-}
+};
 
 export default function ProjetosPage() {
   return (

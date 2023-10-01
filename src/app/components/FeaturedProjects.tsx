@@ -1,11 +1,11 @@
-import SectionTitle from "@/components/layout/SectionTitle";
-import Card from "@/components/Card";
-import ArrowLink from "@/components/ArrowLink";
+import SectionTitle from '@/components/layout/SectionTitle';
+import Card from '@/components/Card';
+import ArrowLink from '@/components/ArrowLink';
 
 interface CardItem {
-  title: string,
-  href: string,
-  tags: Array<string>
+  title: string;
+  href: string;
+  tags: Array<string>;
 }
 
 interface CardsList extends Array<CardItem> {}
@@ -14,28 +14,19 @@ const cards: CardsList = [
   {
     title: 'Benzel-Busch',
     href: '/projects',
-    tags: [
-      'Drupal',
-      'React',
-      'Apache Solr'
-    ],
+    tags: ['Drupal', 'React', 'Apache Solr'],
   },
   {
     title: 'MIT Quest',
     href: '/projects',
-    tags: [
-      'Drupal 10',
-    ],
+    tags: ['Drupal 10'],
   },
   {
     title: 'DomusVi',
     href: '/projects',
-    tags: [
-      'Drupal 7',
-      'Apache Solr'
-    ],
-  }
-]
+    tags: ['Drupal 7', 'Apache Solr'],
+  },
+];
 
 export default function FeaturedProjects() {
   if (!cards) {
@@ -58,7 +49,7 @@ export default function FeaturedProjects() {
                 className="bg-gray-300 h-44 lg:h-64"
               />
             </li>
-          )
+          );
         })}
       </ul>
 
@@ -66,5 +57,5 @@ export default function FeaturedProjects() {
         <ArrowLink path={'/projects'} text={'See all projects'} />
       </div>
     </div>
-  )
+  );
 }

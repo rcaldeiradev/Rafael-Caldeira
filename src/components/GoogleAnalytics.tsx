@@ -1,12 +1,15 @@
 'use client';
 
-import Script from "next/script";
-import {usePathname, useSearchParams} from "next/navigation";
-import {useEffect} from "react";
-import {pageview} from "@/lib/gtagHelper";
+import Script from 'next/script';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
+import { pageview } from '@/lib/gtagHelper';
 
-export default function GoogleAnalytics({ gaMeasurementId }: { gaMeasurementId: string }) {
-
+export default function GoogleAnalytics({
+  gaMeasurementId,
+}: {
+  gaMeasurementId: string;
+}) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -37,5 +40,5 @@ export default function GoogleAnalytics({ gaMeasurementId }: { gaMeasurementId: 
         }}
       />
     </>
-  )
+  );
 }

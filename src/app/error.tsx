@@ -1,16 +1,24 @@
 'use client';
 
-import {useEffect} from "react";
+import { useEffect } from 'react';
+import PageTitle from '@/components/layout/PageTitle';
+import Button from '@/components/Button';
 
-export default function AppError({ error, reset }: { error: Error, reset: () => void }) {
+export default function AppError({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
   useEffect(() => {
     console.log(`Logging the error ${error}`);
   });
 
   return (
-    <div>
-      <h1>Ops, algo de errado não está certo.</h1>
-      <button onClick={() => reset()}>Recarregar</button>
+    <div className="container mx-auto">
+      <PageTitle titleText="Something wrong happened" />
+      <Button text="Reload page" onClick={() => reset()} />
     </div>
   );
 }
