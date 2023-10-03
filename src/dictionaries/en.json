@@ -1,0 +1,12 @@
+{
+  "position": "Software Engineer",
+  "aboutTeaser": "Hello! I'm a Software Engineer with over 7 years of experience, creating web solutions for notable organizations such as MIT and Benzel-Busch. I specialize in PHP, JavaScript, TypeScript, API integration, automated testing, databases, server administration and containers, continuous integration, SEO, and more.",
+  "aboutTeaserTitle": "About Me",
+  "moreAboutMe": "More about me",
+  "featuredProjects": "Featured Projects",
+  "viewProject": "View project",
+  "seeAllProjects": "See all projects",
+  "home": "Home",
+  "about": "About",
+  "projects": "Projects"
+}

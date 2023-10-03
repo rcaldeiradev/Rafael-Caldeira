@@ -1,4 +1,10 @@
-export default function Hero() {
+import { Dictionary } from '@/lib/dictionaries';
+
+interface HeroProps {
+  dictionary: Dictionary;
+}
+
+export default async function Hero({ dictionary }: HeroProps) {
   return (
     <div className="hero mb-10 mt-4 lg:my-20">
       <h1 className="flex flex-col">
@@ -6,7 +12,7 @@ export default function Hero() {
           Rafael Caldeira
         </span>
         <span className="font-semibold text-xl lg:text-3xl text-gray-500">
-          Software Engineer
+          {dictionary.position}
         </span>
       </h1>
     </div>

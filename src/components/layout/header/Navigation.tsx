@@ -4,30 +4,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import MenuToggler from '@/components/layout/header/MenuToggler';
+import { Dictionary } from '@/lib/dictionaries';
 
 interface NavigationItem {
   label: string;
   href: string;
 }
 
-const NavigationObject: Array<NavigationItem> = [
-  {
-    label: 'Home',
-    href: '/',
-  },
-  {
-    label: 'About',
-    href: '/about',
-  },
-  {
-    label: 'Projects',
-    href: '/projects',
-  },
-];
-
-export default function Navigation() {
+export default function Navigation({ dictionary }: { dictionary: Dictionary }) {
   const pathname = usePathname();
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -35,6 +20,21 @@ export default function Navigation() {
   };
 
   const openMobileMenuClasses = 'absolute top-16 w-full p-4 bg-gray-900';
+
+  const NavigationObject: Array<NavigationItem> = [
+    {
+      label: dictionary.home,
+      href: '/',
+    },
+    {
+      label: dictionary.about,
+      href: '/about',
+    },
+    {
+      label: dictionary.projects,
+      href: '/projects',
+    },
+  ];
 
   return (
     <>

@@ -1,4 +1,4 @@
-import './globals.scss';
+import '../globals.scss';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Footer from '@/components/layout/footer/Footer';
 import Header from '@/components/layout/header/Header';
@@ -10,17 +10,21 @@ const inter = Inter({
   display: 'swap',
 });
 
+interface RootLayoutParams {
+  children: React.ReactNode;
+  params: { lang: string };
+}
+
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  params: { lang },
+}: RootLayoutParams) {
   return (
     <html lang="pt" className={`h-full font-inter ${inter.className}`}>
       <GoogleAnalytics gaMeasurementId={process.env.GA_MEASUREMENT_ID ?? ''} />
 
       <body className="flex flex-col h-full">
-        <Header />
+        <Header lang={lang} />
 
         <Content>{children}</Content>
 

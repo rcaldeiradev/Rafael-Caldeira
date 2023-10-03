@@ -1,6 +1,7 @@
 import SectionTitle from '@/components/layout/SectionTitle';
 import Card from '@/components/Card';
 import ArrowLink from '@/components/ArrowLink';
+import { Dictionary } from '@/lib/dictionaries';
 
 interface CardItem {
   title: string;
@@ -28,14 +29,23 @@ const cards: CardsList = [
   },
 ];
 
-export default function FeaturedProjects() {
+interface FeaturedProjectsProps {
+  dictionary: Dictionary;
+}
+
+export default function FeaturedProjects({
+  dictionary,
+}: FeaturedProjectsProps) {
   if (!cards) {
     return null;
   }
 
   return (
     <div className="featured-projects mb-6 lg:mb-28">
-      <SectionTitle titleText="Featured Projects" className="mb-8 lg:mb-16" />
+      <SectionTitle
+        titleText={dictionary.featuredProjects}
+        className="mb-8 lg:mb-16"
+      />
 
       <ul className="cards flex flex-col md:flex-row gap-4 lg:gap-8 mb-6 lg:mb-12">
         {cards.map((card, key) => {
@@ -44,7 +54,7 @@ export default function FeaturedProjects() {
               <Card
                 title={card.title}
                 href={card.href}
-                linkText="View project"
+                linkText={dictionary.viewProject}
                 tags={card.tags}
                 className="bg-gray-300 h-44 lg:h-64"
               />
@@ -54,7 +64,7 @@ export default function FeaturedProjects() {
       </ul>
 
       <div className="actions flex justify-center">
-        <ArrowLink path={'/projects'} text={'See all projects'} />
+        <ArrowLink path={'/projects'} text={dictionary.seeAllProjects} />
       </div>
     </div>
   );
