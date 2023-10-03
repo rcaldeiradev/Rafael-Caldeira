@@ -1,15 +1,12 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Card from "../../src/components/Card";
+import Card from '../../src/components/Card';
 
 describe('Card', () => {
   const title = 'Regular card';
   const href = '/card-href';
   const linkText = 'Cool link text';
-  const tags = [
-    'First tag',
-    'Second tag',
-  ];
+  const tags = ['First tag', 'Second tag'];
 
   beforeEach(() => {
     render(<Card title={title} href={href} linkText={linkText} tags={tags} />);
