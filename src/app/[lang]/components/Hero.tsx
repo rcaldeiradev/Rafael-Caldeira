@@ -1,10 +1,12 @@
-import { Dictionary } from '@/lib/dictionaries';
+import { getDictionary } from '@/lib/dictionaries';
 
 interface HeroProps {
-  dictionary: Dictionary;
+  lang: string;
 }
 
-export default async function Hero({ dictionary }: HeroProps) {
+export default async function Hero({ lang }: HeroProps) {
+  const dictionary = await getDictionary(lang);
+
   return (
     <div className="hero mb-10 mt-4 lg:my-20">
       <h1 className="flex flex-col">

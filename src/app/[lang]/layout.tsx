@@ -25,9 +25,7 @@ export default function RootLayout({
 
       <body className="flex flex-col h-full">
         <Header lang={lang} />
-
         <Content>{children}</Content>
-
         <Footer />
       </body>
     </html>

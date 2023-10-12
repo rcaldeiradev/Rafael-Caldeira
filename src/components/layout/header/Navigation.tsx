@@ -11,7 +11,12 @@ interface NavigationItem {
   href: string;
 }
 
-export default function Navigation({ dictionary }: { dictionary: Dictionary }) {
+interface NavigationProps {
+  dictionary: Dictionary;
+  lang: string;
+}
+
+export default function Navigation({ dictionary, lang }: NavigationProps) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,15 +29,15 @@ export default function Navigation({ dictionary }: { dictionary: Dictionary }) {
   const NavigationObject: Array<NavigationItem> = [
     {
       label: dictionary.home,
-      href: '/',
+      href: `/${lang}`,
     },
     {
       label: dictionary.about,
-      href: '/about',
+      href: `/${lang}/about`,
     },
     {
       label: dictionary.projects,
-      href: '/projects',
+      href: `/${lang}/projects`,
     },
   ];
 

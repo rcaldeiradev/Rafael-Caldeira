@@ -12,8 +12,8 @@ export default async function Header({ lang }: HeaderProps) {
   return (
     <header className="px-4 2xl:px-0 py-6 bg-gray-900">
       <div className="container mx-auto flex justify-between relative">
-        <Navigation dictionary={dictionary} />
-        <Brand />
+        <Navigation dictionary={dictionary} lang={lang} />
+        <Brand lang={lang} />
       </div>
     </header>
   );

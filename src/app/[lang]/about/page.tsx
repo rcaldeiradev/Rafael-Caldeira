@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Soon',
 };
 
-export default function ProjetosPage() {
+export default function AboutPage() {
   return (
     <div className="container mx-auto">
       <PageTitle titleText="About" />

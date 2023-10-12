@@ -6,7 +6,7 @@ export const metadata = {
     'Conheça os projetos que já realizei, desde as stacks de desenvolvimento utilizadas até os desafios superados.',
 };
 
-export default function ProjetosPage() {
+export default function ProjectsPage() {
   return (
     <div className="container mx-auto">
       <PageTitle titleText="Projects" />

@@ -9,6 +9,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noreferrer"
           bgColor="#FFFFFF"
+          fgColor="#000000"
           className="mx-3"
         />
       </li>
@@ -18,6 +19,7 @@ export default function SocialLinks() {
           target="_blank"
           rel="noreferrer"
           bgColor="#FFFFFF"
+          fgColor="#000000"
           className="mx-3"
         />
       </li>

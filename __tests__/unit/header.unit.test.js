@@ -2,11 +2,11 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Brand from '../../src/components/layout/header/Brand';
 
-describe('Header', () => {
-  it('redirects the logo to the homepage', async () => {
-    render(<Brand />);
+it('should render the logo with a link to the homepage', async () => {
+  render(<Brand lang="en" />);
+  const logoLink = screen.getByLabelText('Go to the homepage');
 
-    const logoLink = screen.getByRole('link');
-    expect(logoLink).toHaveAttribute('href', '/');
-  });
+  expect(logoLink).toBeVisible();
+  expect(logoLink).toHaveTextContent('[ RC ]');
+  expect(logoLink).toHaveAttribute('href', '/en');
 });

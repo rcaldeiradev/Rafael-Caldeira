@@ -1,36 +1,49 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Card from '../../src/components/Card';
 
-describe('Card', () => {
+function setup() {
   const title = 'Regular card';
   const href = '/card-href';
   const linkText = 'Cool link text';
   const tags = ['First tag', 'Second tag'];
 
-  beforeEach(() => {
-    render(<Card title={title} href={href} linkText={linkText} tags={tags} />);
-  });
+  const utils = render(
+    <Card title={title} href={href} linkText={linkText} tags={tags} />,
+  );
 
-  it('renders the card title', () => {
-    const renderedTitle = screen.getByRole('heading');
-    expect(renderedTitle).toBeInTheDocument();
-    expect(renderedTitle).toHaveTextContent(title);
-  });
+  return {
+    ...utils,
+    title,
+    href,
+    linkText,
+    tags,
+  };
+}
 
-  it('renders the card link', () => {
-    const renderedLink = screen.getByRole('link');
-    expect(renderedLink).toBeInTheDocument();
-    expect(renderedLink).toHaveTextContent(linkText);
-    expect(renderedLink).toHaveAttribute('href', href);
-  });
+it('should render the card title with correct text', () => {
+  const { getByRole, title } = setup();
+  const renderedTitle = getByRole('heading');
 
-  it('renders all card tags', () => {
-    const renderedTags = screen.getAllByTestId('tag');
-    expect(renderedTags).toHaveLength(tags.length);
+  expect(renderedTitle).toBeVisible();
+  expect(renderedTitle).toHaveTextContent(title);
+});
 
-    renderedTags.forEach((tag, index) => {
-      expect(tag).toHaveTextContent(tags[index]);
-    });
+it('should render the card link with correct text and href', () => {
+  const { getByRole, linkText, href } = setup();
+  const renderedLink = getByRole('link');
+
+  expect(renderedLink).toBeVisible();
+  expect(renderedLink).toHaveTextContent(linkText);
+  expect(renderedLink).toHaveAttribute('href', href);
+});
+
+it('should render all card tags with correct texts', () => {
+  const { getAllByTestId, tags } = setup();
+  const renderedTags = getAllByTestId('tag');
+
+  expect(renderedTags).toHaveLength(tags.length);
+  renderedTags.forEach((tag, index) => {
+    expect(tag).toHaveTextContent(tags[index]);
   });
 });
